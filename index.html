@@ -7,72 +7,74 @@
 
 <style>
 body{
- margin:0;
- font-family:"Georgia",serif;
- background:#fffaf7;
- color:#6b4a20;
- text-align:center;
+margin:0;
+font-family:Georgia,serif;
+background:#fffaf7;
+color:#6b4a20;
+text-align:center;
 }
 .card{
- min-height:100vh;
- padding:40px 20px;
- display:flex;
- flex-direction:column;
- justify-content:center;
- align-items:center;
- background:
- linear-gradient(rgba(255,255,255,.85),rgba(255,255,255,.85)),
- url("https://images.unsplash.com/photo-1519741497674-611481863552");
- background-size:cover;
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:20px;
+background:linear-gradient(#ffffffdd,#ffffffdd),
+url("https://images.unsplash.com/photo-1519741497674-611481863552");
+background-size:cover;
 }
-.border{
- border:3px solid #d4af37;
- border-radius:25px;
- padding:35px 25px;
- max-width:420px;
- box-shadow:0 0 25px #d4af3770;
+.box{
+max-width:430px;
+padding:35px 25px;
+border:3px solid #d4af37;
+border-radius:30px;
+box-shadow:0 0 30px #d4af3766;
+background:white;
 }
 h1{
- font-size:42px;
- color:#b8860b;
- margin:10px;
-}
-.heart{
- font-size:35px;
-}
-p{
- font-size:20px;
- line-height:1.6;
+font-size:42px;
+color:#c79a20;
 }
 .gold{
- color:#c79a20;
- font-weight:bold;
+color:#b8860b;
+font-weight:bold;
+}
+p{
+font-size:19px;
+line-height:1.6;
 }
 button{
- background:#d4af37;
- color:white;
- border:none;
- padding:14px 30px;
- border-radius:30px;
- font-size:18px;
- margin-top:20px;
+background:#d4af37;
+color:white;
+border:0;
+padding:14px 25px;
+border-radius:30px;
+font-size:17px;
 }
 </style>
 </head>
 
 <body>
 
+<audio id="music" loop>
+<source src="music.mp3" type="audio/mpeg">
+</audio>
+
 <div class="card">
-<div class="border">
+<div class="box">
 
-<div class="heart">🤍🌸🤍</div>
+<h2>🤍🌸🤍</h2>
 
-<h1>Maftuna<br>❤️<br>Umarjon</h1>
+<h1>
+Maftuna<br>
+❤️<br>
+Umarjon
+</h1>
 
 <p>
-Sizni biz uchun eng quvonchli kun bo‘lgan
+Sizni aziz farzandlarimizning
 <br>
-<strong>nikoh to‘yimizga</strong>
+<b>nikoh to‘yiga</b>
 taklif qilamiz.
 </p>
 
@@ -86,15 +88,31 @@ taklif qilamiz.
 </p>
 
 <p>
-Sizning tashrifingiz biz uchun katta baxt!
+<b>Kuyov tomoni:</b><br>
+Nodir & Iqbola
 </p>
 
-<button>
-Taklifnomani qabul qilish 🤍
+<p>
+<b>Kelin tomoni:</b><br>
+Kamol & Muxabbat
+</p>
+
+<p>
+🤍 Sizning tashrifingiz biz uchun katta baxt 🤍
+</p>
+
+<button onclick="playMusic()">
+🎵 Musiqani yoqish
 </button>
 
 </div>
 </div>
 
+<script>
+function playMusic(){
+document.getElementById("music").play();
+}
+</script>
+
 </body>
-</htm
+</html>
