@@ -5,220 +5,96 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Maftuna ❤️ Umarjon</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Great+Vibes&display=swap" rel="stylesheet">
-
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
 body{
-background:linear-gradient(135deg,#fffaf4,#fdf2f8,#fff);
-font-family:'Cormorant Garamond',serif;
-overflow-x:hidden;
-color:#5a3d2b;
+ margin:0;
+ font-family:"Georgia",serif;
+ background:#fffaf7;
+ color:#6b4a20;
+ text-align:center;
 }
-
-.hero{
-min-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-padding:20px;
-}
-
 .card{
-background:white;
-max-width:700px;
-width:100%;
-padding:50px 35px;
-border-radius:30px;
-box-shadow:0 20px 60px rgba(0,0,0,.15);
-text-align:center;
-animation:fade 2s;
+ min-height:100vh;
+ padding:40px 20px;
+ display:flex;
+ flex-direction:column;
+ justify-content:center;
+ align-items:center;
+ background:
+ linear-gradient(rgba(255,255,255,.85),rgba(255,255,255,.85)),
+ url("https://images.unsplash.com/photo-1519741497674-611481863552");
+ background-size:cover;
 }
-
+.border{
+ border:3px solid #d4af37;
+ border-radius:25px;
+ padding:35px 25px;
+ max-width:420px;
+ box-shadow:0 0 25px #d4af3770;
+}
 h1{
-font-family:'Great Vibes',cursive;
-font-size:70px;
-color:#c79a45;
+ font-size:42px;
+ color:#b8860b;
+ margin:10px;
 }
-
 .heart{
-font-size:42px;
-animation:pulse 1.2s infinite;
+ font-size:35px;
 }
-
-.subtitle{
-font-size:24px;
-margin-top:10px;
+p{
+ font-size:20px;
+ line-height:1.6;
 }
-
-.line{
-width:120px;
-height:2px;
-background:#c79a45;
-margin:25px auto;
+.gold{
+ color:#c79a20;
+ font-weight:bold;
 }
-
-.info{
-font-size:24px;
-line-height:2;
-}
-
-.btn{
-display:inline-block;
-margin-top:35px;
-padding:15px 40px;
-background:#c79a45;
-color:white;
-text-decoration:none;
-border-radius:50px;
-font-size:20px;
-transition:.3s;
-}
-
-.btn:hover{
-transform:scale(1.05);
-background:#b18432;
-}
-
-.timer{
-margin-top:35px;
-font-size:28px;
-font-weight:bold;
-color:#b18432;
-}
-
-footer{
-margin-top:40px;
-font-size:18px;
-color:#777;
-}
-
-.flower{
-position:fixed;
-font-size:28px;
-animation:fall linear infinite;
-opacity:.7;
-}
-
-@keyframes fade{
-from{opacity:0;transform:translateY(40px);}
-to{opacity:1;transform:translateY(0);}
-}
-
-@keyframes pulse{
-50%{transform:scale(1.2);}
-}
-
-@keyframes fall{
-0%{
-transform:translateY(-100px) rotate(0deg);
-}
-100%{
-transform:translateY(110vh) rotate(360deg);
-}
-}
-
-@media(max-width:600px){
-h1{
-font-size:52px;
-}
-.info{
-font-size:20px;
-}
-.subtitle{
-font-size:20px;
-}
+button{
+ background:#d4af37;
+ color:white;
+ border:none;
+ padding:14px 30px;
+ border-radius:30px;
+ font-size:18px;
+ margin-top:20px;
 }
 </style>
-
 </head>
+
 <body>
 
-<div class="hero">
 <div class="card">
+<div class="border">
 
-<div style="font-size:28px;">🤍 To'y Taklifnomasi 🤍</div>
+<div class="heart">🤍🌸🤍</div>
 
-<h1>Maftuna</h1>
+<h1>Maftuna<br>❤️<br>Umarjon</h1>
 
-<div class="heart">❤️</div>
+<p>
+Sizni biz uchun eng quvonchli kun bo‘lgan
+<br>
+<strong>nikoh to‘yimizga</strong>
+taklif qilamiz.
+</p>
 
-<h1>Umarjon</h1>
+<p class="gold">
+7-AVGUST 2026
+</p>
 
-<div class="line"></div>
+<p>
+🕗 Soat: <b>20:00</b><br>
+📍 G‘ijduvon
+</p>
 
-<div class="subtitle">
-Sizni eng quvonchli kunimizga chin dildan taklif qilamiz.
-</div>
+<p>
+Sizning tashrifingiz biz uchun katta baxt!
+</p>
 
-<div class="line"></div>
-
-<div class="info">
-📅 <b>7-avgust 2026</b><br>
-🕗 <b>20:00</b><br>
-📍 <b>Oq Gul to'yxonasi</b><br>
-📌 G‘ijduvon
-</div>
-
-<div class="timer" id="countdown"></div>
-
-<a class="btn" href="https://maps.google.com/?q=Oq+Gul+toyxonasi+Gijduvon" target="_blank">
-📍 Xaritada ochish
-</a>
-
-<footer>
-Sizni kutib qolamiz! ❤️
-</footer>
+<button>
+Taklifnomani qabul qilish 🤍
+</button>
 
 </div>
 </div>
-
-<script>
-
-const target=new Date("August 7, 2026 20:00:00").getTime();
-
-setInterval(function(){
-
-let now=new Date().getTime();
-
-let d=target-now;
-
-let days=Math.floor(d/(1000*60*60*24));
-let hours=Math.floor((d%(1000*60*60*24))/(1000*60*60));
-let minutes=Math.floor((d%(1000*60*60))/(1000*60));
-let seconds=Math.floor((d%(1000*60))/1000);
-
-document.getElementById("countdown").innerHTML=
-"⏳ "+days+" kun "+hours+" soat "+minutes+" daqiqa "+seconds+" soniya";
-
-},1000);
-
-for(let i=0;i<30;i++){
-
-let f=document.createElement("div");
-
-f.className="flower";
-
-f.innerHTML=Math.random()>0.5?"🌸":"🌹";
-
-f.style.left=Math.random()*100+"vw";
-
-f.style.animationDuration=(5+Math.random()*8)+"s";
-
-f.style.fontSize=(20+Math.random()*20)+"px";
-
-f.style.animationDelay=Math.random()*5+"s";
-
-document.body.appendChild(f);
-
-}
-
-</script>
 
 </body>
-</html>
+</htm
